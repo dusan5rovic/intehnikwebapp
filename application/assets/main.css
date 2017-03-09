@@ -1,0 +1,149 @@
+/*
+html, body 
+	{
+	  font-family: sans-serif;
+	  margin: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+h1 
+	{
+	  font-size: 48px;
+	}
+
+p 
+	{
+	  max-width: 65%;
+	  min-width: 500px;
+	}
+
+h2 
+	{
+	  text-align: center;
+	  font-size: 2.6rem;
+	}
+
+div 
+	{
+	  padding-right: 30px;
+	  height: 100%;
+	  width: 100%;
+	}
+
+video 
+	{
+	  background-color: #000000;
+	  border: 2px solid black;
+	}
+
+.container 
+	{
+	  display: flex;
+	}
+
+.main 
+	{
+	  padding-left: 30px;
+	  min-width: 75%;
+	}
+
+.nav 
+	{
+	  background-color: #FFEE00;
+	  max-width: 25%;
+	  min-width: 140px;
+	  flex: 1;
+	}
+
+.nav h1 
+	{
+	  padding-left: 20px;
+	}
+*/
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.container 
+	{
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;  
+	  
+	  -webkit-flex-flow: row wrap;
+	  flex-flow: row wrap;
+	  
+	  font-weight:	bold;
+	  text-align:	center;
+	}
+
+.container > * 
+	{
+	  padding:	10px;
+	  flex:		1 100%;
+	}
+
+.container-2 
+	{
+	  display: -webkit-box;
+	  display: -moz-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;  
+	  
+	  -webkit-flex-flow: col wrap;
+	  flex-flow: coll wrap;
+	  
+	  font-weight:	bold;
+	  text-align:	center;
+	}
+
+.container-2 > * 
+	{
+	  padding:	10px;
+	  /*flex:		1 100%;*/
+	  flex:		auto;
+	}
+
+.header 
+	{
+		background: tomato;
+	}
+
+.footer 
+	{
+		background: lightgreen;
+	}
+
+.main 
+	{
+	  text-align: left;
+	  background: deepskyblue;
+	}
+
+.nav 
+	{
+		background: gold;
+	}
+
+/*.aside-2 {
+  background: hotpink;
+}*/
+
+/*@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}*/
+
+@media all and (min-width: 800px) 
+	{
+	  .main		{ flex: 3 0px; }
+	  .nav		{ order: 1; } 
+	  .main		{ order: 2; }
+	  /*.aside-2 { order: 3; }*/
+	  .footer	{ order: 4; }
+	}
+
+body 
+	{
+		padding: 2em; 
+	}
